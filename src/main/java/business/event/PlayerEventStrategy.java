@@ -4,5 +4,6 @@ import model.Player;
 
 public interface PlayerEventStrategy {
     public boolean play(Player currentPlayer,Player opponentPlayer);
+    public boolean startTurn(Player currentPlayer);
 
 }

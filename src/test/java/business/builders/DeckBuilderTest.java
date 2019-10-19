@@ -16,6 +16,7 @@ public class DeckBuilderTest {
     public void prepareDeck() {
         Deck deck = DeckBuilder.getInstance().prepareDeck();
         assertTrue(deck.getActiveCards() != null && deck.getActiveCards().size() == 3);
+        assertTrue(deck.getPassiveCards() != null && deck.getPassiveCards().size() == 17);
     }
 
 }

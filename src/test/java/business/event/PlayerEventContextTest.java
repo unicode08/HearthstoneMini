@@ -17,10 +17,6 @@ public class PlayerEventContextTest {
 
         PlayerEventContext firstPlayerContext = new PlayerEventContext(new FirstPlayerEventStrategy(), firstPlayer, secondPlayer);
 
-        for (int i = 0; i < 4; i++) {
-            System.out.println(firstPlayerContext.play());
-        }
-
         assertTrue(firstPlayerContext.play());
     }
 }

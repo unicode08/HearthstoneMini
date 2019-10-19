@@ -7,6 +7,7 @@ public class PlayerEventContext {
     private PlayerEventStrategy playerEventStrategy;
     private Player currentPlayer;
     private Player opponentPlayer;
+    private boolean isYourTurn = false;
 
     public PlayerEventContext(PlayerEventStrategy playerEventStrategy,Player currentPlayer,Player opponentPlayer) {
         this.playerEventStrategy = playerEventStrategy;
@@ -18,4 +19,7 @@ public class PlayerEventContext {
         return playerEventStrategy.play(currentPlayer,opponentPlayer);
     }
 
+    public void setYourTurn(boolean yourTurn) {
+        isYourTurn = yourTurn;
+    }
 }

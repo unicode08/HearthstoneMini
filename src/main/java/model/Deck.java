@@ -1,33 +1,42 @@
 package model;
 
-import java.util.List;
+import java.util.Stack;
 
 public class Deck {
-    private List<Card> activeCards;
-    private List<Card> passiveCards;
-    private List<Card> usedCards;
+    private Stack<Card> activeCards;
+    private Stack<Card> passiveCards;
+    private Stack<Card> usedCards;
+    private Stack<Card> discardedCards;
 
-    public List<Card> getActiveCards() {
+    public Stack<Card> getActiveCards() {
         return activeCards;
     }
 
-    public void setActiveCards(List<Card> activeCards) {
+    public void setActiveCards(Stack<Card> activeCards) {
         this.activeCards = activeCards;
     }
 
-    public List<Card> getPassiveCards() {
+    public Stack<Card> getPassiveCards() {
         return passiveCards;
     }
 
-    public void setPassiveCards(List<Card> passiveCards) {
+    public void setPassiveCards(Stack<Card> passiveCards) {
         this.passiveCards = passiveCards;
     }
 
-    public List<Card> getUsedCards() {
+    public Stack<Card> getUsedCards() {
         return usedCards;
     }
 
-    public void setUsedCards(List<Card> usedCards) {
+    public void setUsedCards(Stack<Card> usedCards) {
         this.usedCards = usedCards;
+    }
+
+    public Stack<Card> getDiscardedCards() {
+        return discardedCards;
+    }
+
+    public void setDiscardedCards(Stack<Card> discardedCards) {
+        this.discardedCards = discardedCards;
     }
 }
