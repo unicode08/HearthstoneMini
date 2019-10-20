@@ -18,11 +18,14 @@ public abstract class AbstractPlayerEventStrategy implements PlayerEventStrategy
     public abstract boolean playImpl(Player currentPlayer, Player opponentPlayer);
 
     public boolean play(Player currentPlayer, Player opponentPlayer) {
+        if (currentPlayer.getHealth().getHealth() <= 0) {
+            return false;
+        }
         System.out.println(GameConstants.turnGameInfo);
         PlayerMove move = readPlayersWantToDo();
         switch (move) {
             case SHOWCARDS: {
-                System.out.println("Current Player Hp: " + currentPlayer.getHealth().getHealth() + "Opponent Player Hp: " + opponentPlayer.getHealth().getHealth());
+                System.out.println("Current Player Hp: " + currentPlayer.getHealth().getHealth() + " Opponent Player Hp: " + opponentPlayer.getHealth().getHealth());
                 System.out.println("Active Mana Count:" + currentPlayer.getManaCap().getActiveManaCount() + " Mana Cap: " + currentPlayer.getManaCap().getCap());
                 System.out.println(getCardsAsString(currentPlayer.getDeck().getActiveCards()));
                 return play(currentPlayer, opponentPlayer);
