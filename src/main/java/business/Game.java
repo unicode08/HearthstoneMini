@@ -33,17 +33,19 @@ public class Game {
 
     public void runGame() {
         System.out.println("Welcome to HeartstoneMini");
+        boolean isEndMessagePrinted = false;
         while (true) {
             PlayerEventContext activePlayerContent = getTurn();
             activePlayerContent.startTurn();
             System.out.println("Hey " + activePlayerContent.getCurrentPlayer().getName() + "! İt's your turn, Play careful.");
             while (activePlayerContent.play()) {
                 if (isGameEnded(activePlayerContent)) {
+                    isEndMessagePrinted = true;
                     break;
                 }
             }
 
-            if (isGameEnded(activePlayerContent)) {
+            if (!isEndMessagePrinted && isGameEnded(activePlayerContent)) {
                 break;
             }
         }
@@ -61,7 +63,6 @@ public class Game {
         }
         return retval;
     }
-
 
 
     public PlayerEventContext getTurn() {

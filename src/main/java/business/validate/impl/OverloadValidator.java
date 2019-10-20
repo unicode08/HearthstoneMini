@@ -10,6 +10,7 @@ import java.util.Stack;
 public class OverloadValidator implements SpecialRulesValidator {
     public void validate(Player player) {
         if (player.getDeck().getActiveCards().size() > GameConstants.maxActiveDeckSize) {
+            System.out.println(GameConstants.overloadWarning);
             Stack<Card> activeCards = player.getDeck().getActiveCards();
             player.getDeck().getDiscardedCards().push(activeCards.pop());
         }
