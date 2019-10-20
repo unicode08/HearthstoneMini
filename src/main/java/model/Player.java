@@ -1,6 +1,7 @@
 package model;
 
 public class Player {
+    private String name;
     private ManaCap manaCap;
     private Health health;
     private Deck deck;
@@ -27,5 +28,13 @@ public class Player {
 
     public void setDeck(Deck deck) {
         this.deck = deck;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

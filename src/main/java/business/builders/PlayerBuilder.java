@@ -26,7 +26,7 @@ public class PlayerBuilder {
         Player player = new Player();
         player.setDeck(DeckBuilder.getInstance().prepareDeck());
         player.setHealth(new Health(GameConstants.maxHealth));
-        player.setManaCap(new ManaCap(0, 0));
+        player.setManaCap(new ManaCap(-1, -1));
         return player;
     }
 }

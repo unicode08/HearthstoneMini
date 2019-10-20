@@ -6,7 +6,9 @@ public class SecondPlayerEventStrategy extends AbstractPlayerEventStrategy {
 
 
     public boolean playImpl(Player currentPlayer, Player opponentPlayer) {
-        return true;
+        System.out.println(super.getCardsAsString(currentPlayer.getDeck().getActiveCards()));
+        super.readPlayersCardThatWantToPlay();
+        return false;
     }
 
 }
