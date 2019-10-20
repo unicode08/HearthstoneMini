@@ -29,10 +29,10 @@ public class AbstractPlayerEventStrategyTest {
         FirstPlayerEventStrategy firstPlayerEventStrategy = new FirstPlayerEventStrategy();
         firstPlayerEventStrategy.startTurn(firstPlayer);
 
-        assertEquals(1, firstPlayer.getManaCap().getCap().intValue());
-        assertEquals(1, firstPlayer.getManaCap().getActiveManaCount().intValue());
-        assertEquals(4, firstPlayer.getDeck().getActiveCards().size());
-        assertEquals(16, firstPlayer.getDeck().getPassiveCards().size());
+        assertEquals(0, firstPlayer.getManaCap().getCap().intValue());
+        assertEquals(0, firstPlayer.getManaCap().getActiveManaCount().intValue());
+        assertEquals(3, firstPlayer.getDeck().getActiveCards().size());
+        assertEquals(17, firstPlayer.getDeck().getPassiveCards().size());
     }
 
     @Test
@@ -41,12 +41,12 @@ public class AbstractPlayerEventStrategyTest {
         FirstPlayerEventStrategy firstPlayerEventStrategy = new FirstPlayerEventStrategy();
         firstPlayerEventStrategy.coordinateManaCap(firstPlayer);
 
-        assertEquals(1, firstPlayer.getManaCap().getCap().intValue());
-        assertEquals(1, firstPlayer.getManaCap().getActiveManaCount().intValue());
+        assertEquals(0, firstPlayer.getManaCap().getCap().intValue());
+        assertEquals(0, firstPlayer.getManaCap().getActiveManaCount().intValue());
         firstPlayerEventStrategy.coordinateManaCap(firstPlayer);
 
-        assertEquals(2, firstPlayer.getManaCap().getCap().intValue());
-        assertEquals(2, firstPlayer.getManaCap().getActiveManaCount().intValue());
+        assertEquals(1, firstPlayer.getManaCap().getCap().intValue());
+        assertEquals(1, firstPlayer.getManaCap().getActiveManaCount().intValue());
     }
 
     @Test
@@ -55,12 +55,12 @@ public class AbstractPlayerEventStrategyTest {
         FirstPlayerEventStrategy firstPlayerEventStrategy = new FirstPlayerEventStrategy();
         firstPlayerEventStrategy.drawCard(firstPlayer);
 
-        assertEquals(4, firstPlayer.getDeck().getActiveCards().size());
-        assertEquals(16, firstPlayer.getDeck().getPassiveCards().size());
+        assertEquals(3, firstPlayer.getDeck().getActiveCards().size());
+        assertEquals(17, firstPlayer.getDeck().getPassiveCards().size());
 
         firstPlayerEventStrategy.drawCard(firstPlayer);
-        assertEquals(5, firstPlayer.getDeck().getActiveCards().size());
-        assertEquals(15, firstPlayer.getDeck().getPassiveCards().size());
+        assertEquals(4, firstPlayer.getDeck().getActiveCards().size());
+        assertEquals(16, firstPlayer.getDeck().getPassiveCards().size());
     }
 
     @Test

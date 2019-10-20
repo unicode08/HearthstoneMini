@@ -16,6 +16,7 @@ public class OverloadValidatorTest {
         firstPlayerEventStrategy.drawCard(firstPlayer);
         firstPlayerEventStrategy.drawCard(firstPlayer);
         firstPlayerEventStrategy.drawCard(firstPlayer);
+        firstPlayerEventStrategy.drawCard(firstPlayer);
 
         OverloadValidator ov = new OverloadValidator();
         ov.validate(firstPlayer);
