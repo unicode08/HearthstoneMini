@@ -2,7 +2,7 @@ package util;
 
 public class GameConstants {
 
-    public static final Integer maxHealth = 30;
+    public static final Integer maxHealth = 1;
     public static final Integer initialManaCap = -1;
     public static final Integer initialCardCount = 2;
     public static final Integer maxActiveDeckSize = 5;

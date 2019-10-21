@@ -45,7 +45,7 @@ public class Game {
                 }
             }
 
-            if (!isEndMessagePrinted && isGameEnded(activePlayerContent)) {
+            if (isEndMessagePrinted || isGameEnded(activePlayerContent)) {
                 break;
             }
         }
