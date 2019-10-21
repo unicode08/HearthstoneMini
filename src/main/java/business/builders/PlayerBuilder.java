@@ -22,6 +22,12 @@ public class PlayerBuilder {
         return playerBuilder;
     }
 
+    /**
+     * <p>
+     *     Creates new player via full hp , 0 manacap and randomized deckss
+     * </p>
+     * @return
+     */
     public Player preparePlayer() {
         Player player = new Player();
         player.setDeck(DeckBuilder.getInstance().prepareDeck());

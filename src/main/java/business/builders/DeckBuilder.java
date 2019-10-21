@@ -23,6 +23,13 @@ public class DeckBuilder {
         return deckBuilder;
     }
 
+    /**
+     * <p>
+     *     Prepares initial deck via shuffled cards
+     * </p>
+     *
+     * @return
+     */
     public Deck prepareDeck() {
         Deck deck = new Deck();
         List<Card> shuffledCardList = shuffleCardsForPreparing();
